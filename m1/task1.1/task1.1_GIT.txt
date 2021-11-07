@@ -1,0 +1,41 @@
+$ git reflog
+4608843 (HEAD -> main, origin/main, origin/develop, origin/HEAD, develop) HEAD@{0}: merge develop: Fast-forward
+08b2da6 HEAD@{1}: checkout: moving from develop to main
+4608843 (HEAD -> main, origin/main, origin/develop, origin/HEAD, develop) HEAD@{2}: merge styles: Merge made by the 'recursive' strategy.
+65be06b (origin/images, images) HEAD@{3}: merge images: Fast-forward
+3dff7a9 HEAD@{4}: checkout: moving from styles to develop
+23f2d40 (origin/styles, styles) HEAD@{5}: commit: Change your index.html. Commit.
+e16b66f HEAD@{6}: checkout: moving from images to styles
+65be06b (origin/images, images) HEAD@{7}: checkout: moving from styles to images
+e16b66f HEAD@{8}: checkout: moving from develop to styles
+3dff7a9 HEAD@{9}: checkout: moving from styles to develop
+e16b66f HEAD@{10}: checkout: moving from develop to styles
+3dff7a9 HEAD@{11}: checkout: moving from styles to develop
+e16b66f HEAD@{12}: commit: Create branch with name “styles”. Checkout on it. Add styles folder with styles source inside it. Commit.
+3dff7a9 HEAD@{13}: checkout: moving from develop to styles
+3dff7a9 HEAD@{14}: checkout: moving from images to develop
+65be06b (origin/images, images) HEAD@{15}: commit: Change your index.html. Add images source inside it. Commit.
+078d0f7 HEAD@{16}: commit: Create branch with name “images”. Checkout on it. Add images folder with some images inside it. Commit.
+:...skipping...
+4608843 (HEAD -> main, origin/main, origin/develop, origin/HEAD, develop) HEAD@{0}: merge develop: Fast-forward
+08b2da6 HEAD@{1}: checkout: moving from develop to main
+4608843 (HEAD -> main, origin/main, origin/develop, origin/HEAD, develop) HEAD@{2}: merge styles: Merge made by the 'recursive' strategy.
+65be06b (origin/images, images) HEAD@{3}: merge images: Fast-forward
+3dff7a9 HEAD@{4}: checkout: moving from styles to develop
+23f2d40 (origin/styles, styles) HEAD@{5}: commit: Change your index.html. Commit.
+e16b66f HEAD@{6}: checkout: moving from images to styles
+65be06b (origin/images, images) HEAD@{7}: checkout: moving from styles to images
+e16b66f HEAD@{8}: checkout: moving from develop to styles
+3dff7a9 HEAD@{9}: checkout: moving from styles to develop
+e16b66f HEAD@{10}: checkout: moving from develop to styles
+3dff7a9 HEAD@{11}: checkout: moving from styles to develop
+e16b66f HEAD@{12}: commit: Create branch with name “styles”. Checkout on it. Add styles folder with styles source inside it. Commit.
+3dff7a9 HEAD@{13}: checkout: moving from develop to styles
+3dff7a9 HEAD@{14}: checkout: moving from images to develop
+65be06b (origin/images, images) HEAD@{15}: commit: Change your index.html. Add images source inside it. Commit.
+078d0f7 HEAD@{16}: commit: Create branch with name “images”. Checkout on it. Add images folder with some images inside it. Commit.
+3dff7a9 HEAD@{17}: checkout: moving from develop to images
+3dff7a9 HEAD@{18}: commit: Create index.html empty file. Commit.
+08b2da6 HEAD@{19}: checkout: moving from main to develop
+08b2da6 HEAD@{20}: commit: Create empty readme.txt file.
+0d31c42 HEAD@{21}: clone: from github.com:Shivalino/DevOps_online_Kiev_2021Q4.git
