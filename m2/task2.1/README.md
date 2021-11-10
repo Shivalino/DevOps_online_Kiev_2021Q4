@@ -54,6 +54,7 @@ I have installed Ubuntu 18 and Guest additions using instructions: https://linux
 2.2 Configure the USB to connect the USB ports of the host machine to the VM [1, ch.3.11].
 
 ![VM3](./images/003.png)
+![VM3](./images/009.png)
 
 2.3 Configure a shared folder to exchange data between the virtual machine and the host [1, ch.4.3].
 
@@ -75,7 +76,32 @@ I have installed Ubuntu 18 and Guest additions using instructions: https://linux
 
 1. Download the required version of Vagrant according to the instructions [5] and according to the host operating system (OS) installed on the student's workplace. For Windows, the file may be called, for example, vagrant_2.2.0_x86_64.msi. Install Vagrant. Check the path to Vagrant bin in the Path variable (My computer -> Properties -> Advanced system settings -> Advanced -> Environment Variables).
 2. Run the powershell. Create a folder "student name" (in English). In this example, create a folder vagrant_test. Next, go to the folder.
+3. Initialize the environment with the default Vagrant box: init hashicorp/precise64
 
-![Vagrant1](./images/003.png)
-![Vagrant2](./images/004.png)
-![Vagrant BOX](./images/005.png)
+![Vagrant1](./images/301.png)
+
+4. Run vagrant up and watch for messages during VM boot and startup.
+
+![Vagrant2](./images/302.png)
+
+5. Connect to the VM using the program PuTTY (can be downloaded from [6]), using SSH, IP address and port listed above (127.0.0.1:2222). By default, login - vagrant and password are also vagrant
+
+![Vagrant3](./images/303.png)
+
+6. Record the date and time by executing the date command
+
+![Vagrant4](./images/304.png)
+
+7. Stop and delete the created VM.
+
+![Vagrant5](./images/305.png)
+
+8. Create your own Vagrant box [7]
+
+![Vagrant6](./images/306.png)
+![Vagrant7](./images/307.png)
+![Vagrant8](./images/308.png)
+![Vagrant9](./images/309.png)
+![Vagrant10](./images/310.png)
+
+9. (optional) Create a test environment from a few servers. Servers' parameters are chosen independently by the student.
