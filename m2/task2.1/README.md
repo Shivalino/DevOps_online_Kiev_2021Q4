@@ -70,7 +70,13 @@ I have installed Ubuntu 18 and Guest additions using instructions: https://linux
 3.1 Run the cmd.exe command line.
 3.2 Examine the purpose and execute the basic commands of VBoxManage list, showvminfo, createvm, startvm, modifyvm, clonevm, snapshot, controlvm [1, ch.8].
 
-
+![VM201](./images/201.png)
+![VM202](./images/202.png)
+![VM203](./images/203.png)
+![VM204](./images/204.png)
+![VM205](./images/205.png)
+![VM206](./images/206.png)
+![VM207](./images/207.png)
 
 ## PART 3. WORK WITH VAGRANT
 
