@@ -34,3 +34,14 @@
 ![aws10](./images/2.2.7_02.png)
 ![aws11](./images/2.2.7_03.png)
 ![aws12](./images/2.2.7_04.png)
+
+## 8. Launch the third instance from backup.
+> I have made template from the 3nd instance. Then have launched the 3rd from template
+
+![aws13](./images/2.2.8_01.png)
+![aws14](./images/2.2.8_02.png)
+
+## 9. Detach Disk_D from the 2nd instance and attach disk_D to the new instance.
+> I have detached second volume added from template. Then I have attached the detached one from the 2nd instance.
+
+![aws15](./images/2.2.8_03.png)
