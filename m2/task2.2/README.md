@@ -22,3 +22,15 @@
 
 ## 5. Launch another Linux Virtual Machine without Amazon Lightsail. It is recommended to use the t2 or t3.micro instance and the CentOS operating system.
 >
+![aws7](./images/2.2.5_01.png)
+
+## 6. Create a snapshot of your instance to keep as a backup.
+>
+![aws8](./images/2.2.6_01.png)
+
+## 7. Create and attach a Disk_D (EBS) to your instance to add more storage space. Create and save some file on Disk_D.
+>
+![aws9](./images/2.2.7_01.png)
+![aws10](./images/2.2.7_02.png)
+![aws11](./images/2.2.7_03.png)
+![aws12](./images/2.2.7_04.png)
