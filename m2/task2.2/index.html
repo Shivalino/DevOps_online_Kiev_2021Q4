@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>ShivaAWSlearning</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		#Container{
+			/*border: 5px solid tomato;*/
+			width: 50%;
+			position: absolute;
+			left: 25%;
+			border-style: solid;
+			border-color: #D3D3D3;
+		}
+			#Title{
+				margin: 0px;
+				background: #3D4F5B;
+				color: white;
+				text-align: center;
+				font: 36px Calibri;
+				padding-bottom: 20px;
+				padding-top: 20px;
+
+			}
+			#MainInformation{
+				display: flex;
+			}
+				#LeftColumne{
+					background: linear-gradient(to right, #424242 0%, #6E6E6E 100%);
+				}
+					#Photo{
+						width: 200px;
+						height: 200px;
+						border-style: solid;
+						border-color: #D3D3D3;
+						border-radius:100px;
+						margin: 40px;
+					}
+					#Name{
+						font: 42px/16px Calibri;
+						margin-left: 10px;
+						margin-bottom: 10px;
+						color: white;
+						text-align: left;
+						
+					}
+					#Hobby1{
+						font: 14px Calibri;
+						background: #FFA500;
+						margin: 8px;
+						border-spacing: 2px;
+						width: 170px;
+						border-radius: 15px;
+					}
+					#Hobby2{
+						font: 14px Calibri;
+						background: #0174DF;
+						margin: 8px;
+						border-spacing: 2px;
+						width: 100px;
+						border-radius: 15px;
+					}
+					#Hobby3{
+						font: 14px Calibri;
+						background: #008000;
+						margin: 8px;
+						border-spacing: 2px;
+						width: 250px;
+						border-radius: 15px;
+					}
+					#Contacts{
+						color: white;
+						font: 22px Calibri;
+						margin: 15px 50px;
+						text-align: left;
+					}
+				#RightColumne{
+					width: 75%
+				}
+		.TextNone1{
+			border-bottom: 3px solid yellow;
+			font: 16px Calibri;
+			color: #0CB5F2;
+			margin-bottom: 5px;
+			margin: 0px 5px;
+		}
+		.TextNone2{
+			border-bottom: 2px solid royalblue;
+			font: 22px Calibri;
+			color: #084B8A;
+			margin: 5px 15px;
+			text-align: left;
+			padding:5px 0px;
+		}
+		.TextUnderline{
+			font: bold 18px Calibri;
+			color: white;
+			text-decoration: underline;
+			text-align: center;
+			margin: 14px 0px;
+		}
+		.Hobby{
+			font: bold 20px Calibri;
+			color: white;
+			text-align: center;
+			margin: 14px 0px;
+		}
+		a{ color:  deepskyblue;
+		 }
+		a:visited{ color: gold;
+		 }
+		ul{
+			padding: 0px 5px;
+			margin: 5px;
+		}
+		.li{
+		 	list-style-type: none;
+		 	text-align: left;
+		}
+		.li:before{
+		 	content: "-";
+		}
+	</style>
+</style>
+</head>
+<body>
+	<div id="Container">
+		<div>
+			<h2 id="Title">EPAM DevOps online Autumn 2021</h2>
+		</div>
+		<div id="MainInformation">
+			<div id="LeftColumne">
+				<div>
+					<img id="Photo" src="./images/0.png" alt="ShadrinVA">
+				</div>
+				<div class="TextNone1">
+					<p id="Name">Viacheslav</p>
+					<p id="Name">Shadrin</p>
+				</div>
+			</div>
+			<div id="RightColumne">
+				<div class="TextNone2">
+					<table>
+						<tbody><tr>
+							<th>
+								Amazone Web Services already explored:
+							</th>
+						</tr>
+						<tr>
+							<td>
+								<ul>
+									<li class="li">
+										Route 53
+									</li>
+									<li class="li">
+										Lightsail
+									</li>
+									<li class="li">
+										S3
+									</li>									
+									<li class="li">
+										Elastic Container Cervice (EC2)
+									</li>
+									<li class="li">
+										Billing
+									</li>
+									<li class="li">
+										Virtual Private Cloud (VPC)
+									</li>
+								</ul>
+							</td>
+						</tr>
+					</tbody></table>
+				</div>
+				<div class="TextNone2">
+					<table>
+						<tbody><tr>
+							<th>
+								Full list with links of completed AWS labs:
+							</th>
+						</tr>
+						<tr>
+							<td>
+								<ul>
+									<li class="li">
+										<a href="https://aws.amazon.com/ru/getting-started/hands-on/launch-a-virtual-machine/">launch-a-virtual-machine</a>
+									</li>
+									<li class="li">
+										<a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/lightsail-how-to-set-up-putty-to-connect-using-ssh/">lightsail-how-to-set-up-putty-to-connect-using-ssh</a>
+									</li>
+									<li class="li">
+										<a href="https://aws.amazon.com/ru/getting-started/hands-on/launch-a-wordpress-website/">launch-a-wordpress-website</a>	
+									</li>
+									<li class="li">
+										<a href="https://aws.amazon.com/ru/getting-started/hands-on/backup-files-to-amazon-s3/">backup-files-to-amazon-s3a>
+									</li>
+									<li class="li">
+										<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hosting-wordpress.html">hosting-wordpress</a>
+									</li>
+									<li class="li">
+										<a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/website-hosting-custom-domain-walkthrough.html">website-hosting-custom-domain-walkthrough</a>
+									</li>
+									<li class="li">
+										<a href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/docker-basics.html">docker-basics</a>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="TextNone2">
+					<table>
+						<tbody><tr></tr>
+						<tr>
+							<td>
+								<ul>
+									<li class="li">
+										<a href="CV_DevOps(5)_KY_Viacheslav_Shadrin.pdf">CV_DevOps(5)_KY_Viacheslav_Shadrin.pdf</a>
+									</li>
+								</ul>
+							</td>
+						</tr>
+					</tbody></table>
+				</div>
+				<div class="TextNone2">
+					<table>
+						<tbody><tr></tr>
+						<tr>
+							<td>
+								<ul>
+									<li class="li">
+										<a href="Readme.md">Readme.md</a>
+									</li>
+								</ul>
+							</td>
+						</tr>
+					</tbody></table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body></html>

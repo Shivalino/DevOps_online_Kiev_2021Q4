@@ -45,3 +45,42 @@
 > I have detached second volume added from template. Then I have attached the detached one from the 2nd instance.
 
 ![aws15](./images/2.2.8_03.png)
+## 10. Launch and configure a WordPress instance with Amazon Lightsail link
+
+![aws16](./images/2.2.10_01.png)
+![aws17](./images/2.2.10_02.png)
+![aws18](./images/2.2.10_03.png)
+![aws19](./images/2.2.10_04.png)
+![aws20](./images/2.2.10_05.png)
+
+##11. Review the 10-minute example Store and Retrieve a File. Repeat, creating your own repository.
+
+![aws21](./images/2.2.11_01.png)
+![aws22](./images/2.2.11_02.png)
+![aws23](./images/2.2.11_03.png)
+![aws24](./images/2.2.11_04.png)
+
+##12. Review the 10-minute example Batch upload files to the cloud to Amazon S3 using the AWS CLI. Create a user AWS IAM, configure CLI AWS and upload any files to S3.
+
+![aws25](./images/2.2.12_01.png)
+![aws26](./images/2.2.12_02.png)
+![aws27](./images/2.2.12_03.png)
+
+##13. Review the 10-minute example. Explore the possibilities of creating your own domain and domain name for your site.
+
+![aws28](./images/2.2.13_01.png)
+![aws29](./images/2.2.13_02.png)
+![aws30](./images/2.2.13_03.png)
+
+##14. Review the 10-minute example Deploy Docker Containers on Amazon Elastic Container Service (Amazon ECS). Repeat, create a cluster, and run the online demo application or better other application with custom settings.
+
+![aws31](./images/2.2.14_01.png)
+![aws32](./images/2.2.14_02.png)
+![aws33](./images/2.2.14_03.png)
+
+##15. Create a static website on Amazon S3, publicly available (link1 or link2 - using a custom domain registered with Route 53). Post on the page your own photo, the name of the educational program (EPAM DevOps online Autumn 2021), the list of AWS services with which the student worked within the educational program or earlier and the full list with links of completed labs (based on tutorials or qwiklabs). Provide the link to the website in your report and СV.
+
+![aws34](./images/2.2.15_01.png)
+![aws35](./images/2.2.16_02.png)
+
+My static website on Amazon S3 [shadrin.link](http://shadrin.link/).
