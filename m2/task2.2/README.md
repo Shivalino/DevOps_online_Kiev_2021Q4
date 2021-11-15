@@ -45,6 +45,7 @@
 > I have detached second volume added from template. Then I have attached the detached one from the 2nd instance.
 
 ![aws15](./images/2.2.8_03.png)
+
 ## 10. Launch and configure a WordPress instance with Amazon Lightsail link
 
 ![aws16](./images/2.2.10_01.png)
@@ -81,6 +82,6 @@
 ##15. Create a static website on Amazon S3, publicly available (link1 or link2 - using a custom domain registered with Route 53). Post on the page your own photo, the name of the educational program (EPAM DevOps online Autumn 2021), the list of AWS services with which the student worked within the educational program or earlier and the full list with links of completed labs (based on tutorials or qwiklabs). Provide the link to the website in your report and СV.
 
 ![aws34](./images/2.2.15_01.png)
-![aws35](./images/2.2.16_02.png)
+![aws35](./images/2.2.15_02.png)
 
-My static website on Amazon S3 [shadrin.link](http://shadrin.link/).
+# My static website on Amazon S3 [shadrin.link](http://shadrin.link/).
