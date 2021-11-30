@@ -83,19 +83,36 @@ show tables;
 
 ## 2. PART 2
 
-10.Make backup of your database.
+>10.Make backup of your database.
 
-11.Delete the table and/or part of the data in the table.
+mysqldump -u root -p petclinic > /home/shiva/petclinic.sql
 
-12.Restore your database.
+>11.Delete the table and/or part of the data in the table.
 
-13.Transfer your local database to RDS AWS.
+![DB4_13](./images/4.1_13.png)
+
+>12.Restore your database.
+
+mysql -u root -p petclinic < /home/shiva/petclinic.sql
+
+![DB4_14](./images/4.1_14.png)
+
+>13.Transfer your local database to RDS AWS.
+
+I have created Centos7 EC2 instance. Security group have opened 3306 port to connect mysql.
 
 14.Connect to your database.
 
-15.Execute SELECT operator similar step 6.
+mysql -u shiva -h ec2-18-193-149-198.eu-central-1.compute.amazonaws.com -pPASSWORD
 
+![DB4_15](./images/4.1_15.png)
+
+15.Execute SELECT operator similar step 6.
 16.Create the dump of your database.
+
+mysql -u shiva -h ec2-18-193-149-198.eu-central-1.compute.amazonaws.com -pPin4guita! petclinic2 > /home/shiva/petclinic2.sql
+
+![DB4_16](./images/4.1_16.png)
 
 ## 3. PART 3
 
