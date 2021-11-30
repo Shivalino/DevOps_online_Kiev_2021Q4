@@ -113,6 +113,7 @@ mysql -u shiva -h ec2-18-193-149-198.eu-central-1.compute.amazonaws.com -pPASSWO
 mysql -u shiva -h ec2-18-193-149-198.eu-central-1.compute.amazonaws.com -pPin4guita! petclinic2 > /home/shiva/petclinic2.sql
 
 ![DB4_16](./images/4.1_16.png)
+![DB4_17](./images/4.1_17.png)
 
 ## 3. PART 3
 
@@ -120,4 +121,11 @@ mysql -u shiva -h ec2-18-193-149-198.eu-central-1.compute.amazonaws.com -pPin4gu
 
 18.Enter data into an Amazon DynamoDB table.
 
+![DB4_18](./images/4.1_18.png)
+
 19.Query an Amazon DynamoDB table using Query and Scan.
+
+![DB4_19](./images/4.1_19.png)
+![DB4_20](./images/4.1_20.png)
+
+
