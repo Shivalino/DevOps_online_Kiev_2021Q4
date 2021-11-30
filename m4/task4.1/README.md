@@ -25,7 +25,7 @@ FLUSH PRIVILEGES;
 DROP USER 'primero'@'%';
 quit
 
-![DB4_01](./images/4.1_02.png)
+![DB4_02](./images/4.1_02.png)
 
 > 3. Select a subject area and describe the database schema, (minimum 3 tables)
 
@@ -41,17 +41,9 @@ Treatments
 mysql -u root -p
 CREATE DATABASE petclinic;
 USE petclinic;
-CREATE TABLE animals (
-  ID_animal INT,
-  ID_doctor INT NOT NULL,
-  ID_petowner INT NOT NULL,
-  ID_diagnosis INT NOT NULL,
-  pet_name VARCHAR(50) NOT NULL,
-  pet_birthday SMALLDATATAME,
-  pet_sex VARCHAR(50) NOT NULL,
-  pet_breed VARCHAR(50) NOT NULL,
-  PRIMARY KEY (ID_animal),
-  FOREIGN KEY (ID_doctor) REFERENCES doctors(ID_doctor)
-  FOREIGN KEY (ID_petowner) REFERENCES petowners(ID_petowner)
-  FOREIGN KEY (ID_diagnosis) REFERENCES diagnosises(ID_diagnosis)
-);
+
+The database is created and filled with a script:
+![DB4_03](./Petclinic-MySQL-Script.sql)
+
+![DB4_04](./images/4.1_03.png)
+
