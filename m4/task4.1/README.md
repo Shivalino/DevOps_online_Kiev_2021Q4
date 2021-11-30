@@ -119,6 +119,8 @@ mysql -u shiva -h ec2-18-193-149-198.eu-central-1.compute.amazonaws.com -pPin4gu
 
 17.Create an Amazon DynamoDB table
 
+![DB4_21](./images/4.1_21.png)
+
 18.Enter data into an Amazon DynamoDB table.
 
 ![DB4_18](./images/4.1_18.png)
