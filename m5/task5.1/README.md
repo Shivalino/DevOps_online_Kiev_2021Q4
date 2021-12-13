@@ -128,28 +128,110 @@ rm roottree1.txt roottree2.txt
 >6) Perform the following sequence of operations:
 >- create a subdirectory test in the home directory;
 mkdir test
+
 >- copy the .bash_history file to this directory while changing its name to labwork2;
 cp .bash_history test/labwork2
+
 >- create a hard and soft link to the labwork2 file in the test subdirectory;
 ln -P labwork2 hrdlnk_01
 ln -s labwork2 sftlnk_01
+
 >- how to define soft and hard link, what do theseconcepts;
+A symbolic or soft link is an actual link to the original file, whereas a hard link is a mirror copy of the original file.
+If you delete the original file, the soft link has no value, because it points to a non-existent file.
+
+In a nutshell, a soft link
+-can cross the file system,
+-allows you to link between directories,
+-has different inode number and file permissions than original file,
+-permissions will not be updated,
+-has only the path of the original file, not the contents.
+
+A hard Link
+-can't cross the file system boundaries (i.e. A hardlink can only work on the same filesystem),
+-can't link directories,
+-has the same inode number and permissions of original file,
+-permissions will be updated if we change the permissions of source file,
+-has the actual contents of original file, so that you still can view the contents, even if the original file moved or removed.
 
 >- change the data by opening a symbolic link. What changes will happen and why
 
 >- rename the hard link file to hard_lnk_labwork2;
+mv hrdlnk_01 hrdlnk_02
 
 >- rename the soft link file to symb_lnk_labwork2 file;
+mv sftlnk_01 sftlnk_02
 
 >- then delete the labwork2. What changes have occurred and why?
 
+![LE5_14](./images/5.1_14.png)
+
 >7) Using the locate utility, find all files that contain the squid and traceroute sequence.
+
+sudo apt install locate
+
+![LE5_15](./images/5.1_15.png)
+
 >8) Determine which partitions are mounted in the system, as well as the types of these partitions.
+
+df
+
+![LE5_16](./images/5.1_16.png)
+
 >9) Count the number of lines containing a given sequence of characters in a given file.
+wc command do that
+
+less hrdlnk_02 | wc -l
+
+![LE5_17](./images/5.1_17.png)
+![LE5_18](./images/5.1_18.png)
+
 >10) Using the find command, find all files in the /etc directory containing the host character sequence.
+
+sudo find -type f -name "*host*"
+![LE5_19](./images/5.1_19.png)
+
 >11) List all objects in /etc that contain the ss character sequence. How can I duplicate a similar command using a bunch of grep?
+
+sudo find -name "*ss*"
+ls -al | grep "ss"
+
 >12) Organize a screen-by-screen print of the contents of the /etc directory. Hint: You must use stream redirection operations.
+
+ls -alh | less
+
 >13) What are the types of devices and how to determine the type of device? Give examples.
+
+All devices in linux are files. They are located in /dev directory.
+c - character
+These devices transfer data, but one a character at a time. You'll see a lot of pseudo devices (/dev/null) as character devices, these devices aren't really physically connected to the machine, but they allow the operating system greater functionality.
+
+b - block
+These devices transfer data, but in large fixed-sized blocks. You'll most commonly see devices that utilize data blocks as block devices, such as harddrives, filesystems, etc.
+
+p - pipe
+Named pipes allow two or more processes to communicate with each other, these are similar to character devices, but instead of having output sent to a device, it's sent to another process.
+
+s - socket
+Socket devices facilitate communication between processes, similar to pipe devices but they can communicate with many processes at once. 
+
 >14) How to determine the type of file in the system, what types of files are there?
+
+I have described c b p s types above.
+More 3 are:
+d - directory
+- - file
+l - link file
+
+Command file helps us to check the type of file
+
+ls -lha /dev | grep ^b
+ls -lha /dev | grep ^l
+
+![LE5_20](./images/5.1_20.png)
+![LE5_21](./images/5.1_21.png)
+
+
 >15) * List the first 5 directory files that were recently accessed in the /etc directory.
 
+ls -ltr | tail -n 5
