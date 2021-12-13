@@ -97,23 +97,52 @@ less supports other file formats such as jar, war, zip, pdf, tar.gz, gif, png, t
 
 >3) Master the skills of navigating the file system using relative and absolute paths. How can you go back to your home directory from anywhere in the filesystem?
 
-
+![LE5_11](./images/5.1_11.png)
 
 >4) Become familiar with the various options for the ls command. Give examples of listing directories using different keys. Explain the information displayed on the terminal using the -l and -a switches.
+
+I have used 'ls -al' in p8 of Part 1 
+
 >5) Perform the following sequence of operations: - create a subdirectory in the home directory; - in this subdirectory create a file containing information about directories located in the root directory (using I/O redirection operations);
+
+mkdir task5.1_2.5
+tree -dL 1 > task5.1_2.5/roottree.txt
+
 >- view the created file;
+
+![LE5_12](./images/5.1_12.png)
+
 >- copy the created file to your home directory using relative and absolute addressing.
+
+![LE5_13](./images/5.1_13.png)
+
 >- delete the previously created subdirectory with the file requesting removal;
+
+
+
 >- delete the file copied to the home directory.
+
+rm -rI task5.1_2.5/
+rm roottree1.txt roottree2.txt
+
 >6) Perform the following sequence of operations:
 >- create a subdirectory test in the home directory;
+mkdir test
 >- copy the .bash_history file to this directory while changing its name to labwork2;
+cp .bash_history test/labwork2
 >- create a hard and soft link to the labwork2 file in the test subdirectory;
+ln -P labwork2 hrdlnk_01
+ln -s labwork2 sftlnk_01
 >- how to define soft and hard link, what do theseconcepts;
+
 >- change the data by opening a symbolic link. What changes will happen and why
+
 >- rename the hard link file to hard_lnk_labwork2;
+
 >- rename the soft link file to symb_lnk_labwork2 file;
+
 >- then delete the labwork2. What changes have occurred and why?
+
 >7) Using the locate utility, find all files that contain the squid and traceroute sequence.
 >8) Determine which partitions are mounted in the system, as well as the types of these partitions.
 >9) Count the number of lines containing a given sequence of characters in a given file.
