@@ -12,7 +12,7 @@
 ![Task 7.1.A](./images/7.1_A_01.png)
 ![Task 7.1.A](./images/7.1_A_02.png)
 
-[Task 7.1.A]: ./lan_scan.sh
+<./lan_scan.sh>
 
 ## B. Using Apache log example create a script to answer the following questions:
 
@@ -38,7 +38,7 @@ Web-server access.log structure:
 We have 9 parameters(fields) to analise
 
 
-[Task 7.1.B script]: ./71b
+<./71b>
 
 ![Task 7.1.B](./images/7.1_b_01.png)
 ![Task 7.1.B](./images/7.1_b_02.png)
