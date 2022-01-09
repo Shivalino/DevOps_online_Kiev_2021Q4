@@ -1,0 +1,86 @@
+#!/usr/bin/awk -f
+
+# web-server access.log structure:
+# %h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\"
+# %h — хост/IP-адрес, с которого произведён запрос к серверу;
+# %t — время запроса к серверу и часовой пояс сервера;
+# %r — тип запроса, его содержимое и версия;
+# %s — код состояния HTTP;
+# %b — количество отданных сервером байт;
+# %{Referer} — URL-источник запроса;
+# %{User-Agent} — HTTP-заголовок, содержащий информацию о запросе (клиентское приложение, язык и т. д.);
+# %{Host} — имя Virtual Host, к которому идет обращение.
+
+#INPUT SECTION
+# host IPs counter
+{host_ip[$1]++}
+
+# requested URL counter
+{url[$7]++}
+
+# error 404 counter
+$9==404 {scode[$7]++}
+
+# requetsts counter for every 24 hours
+{hrs[substr($4,14,2)]++}
+
+# bot counters and IP + User-Agent array
+{ ua=substr($0,index($0,$12))
+  if (ua~/bot/ && ua!~/robot/) {
+    bot[n++]=$1"\t"ua
+    botip[$1]++
+    botua[ua]++ }
+}
+
+#OUTPUT SECTION
+END {
+  print ""
+  # 1 and 3 host IP
+  print "3. How many requests were there from each ip?"
+  max=0
+  for (i in host_ip) {
+    print i"\t("host_ip[i]")";
+    if (host_ip[i]>max) {max=host_ip[i];imax=i}
+  }
+  print ""
+  
+  print "1. From which ip were the most requests?"
+  print "Most requests were from IP: "imax"\t("host_ip[imax]")"
+  print ""
+  
+  # 2 URL
+  max=0
+  for (i in url) {
+#    print i"\t("url[i]")";
+    if (url[i]>max) {max=url[i];imax=i}
+  }
+  print "2. What is the most requested page?"
+  print "Most requested URL: "imax"\t("url[imax]")"
+  print ""
+  
+  #4 error 404 - non-existent page
+  print "4. What non-existent pages were clients referred to?"
+  for (i in scode) print i"\t("scode[i]")"
+  print ""
+  
+  #5 What time did site get the most requests (in hour?? )?
+  max=0
+  print" 5. What time did site get the most requests?"
+  for (i in hrs) if (hrs[i]>max) {max=hrs[i];imax=i}
+  print "Most requested hour: "imax"\t("hrs[imax]")"
+  print ""
+
+  #6 bot
+  max=0
+  print "6. What search bots have accessed the site? (IP)"
+  for (i in botip) if (botip[i]>max) {max=botip[i];imax=i}
+  print "Most bots IP: "imax"\t("botip[imax]")"
+  print ""
+
+  max=0
+  print "6. What search bots have accessed the site? (UA)"
+  for (i in botua) if (botua[i]>max) {max=botua[i];imax=i}
+  print "Most bots UA: "imax"\t("botua[imax]")"
+
+  for (i in bot) print bot[i] | "sort | uniq"
+}
