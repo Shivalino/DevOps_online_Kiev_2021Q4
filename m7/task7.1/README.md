@@ -9,10 +9,19 @@
 
 > The code that performs the functionality of each of the subtasks must be placed in a separate function
 
-![Task 7.1](./images/7.1_A_01.png)
-![Task 7.1](./images/7.1_A_02.png)
+![Task 7.1.A](./images/7.1_A_01.png)
+![Task 7.1.A](./images/7.1_A_02.png)
+
+[Task 7.1.A]: ./lan_scan.sh
 
 ## B. Using Apache log example create a script to answer the following questions:
+
+### 1. From which ip were the most requests?
+### 2. What is the most requested page?
+### 3. How many requests were there from each ip?
+### 4. What non-existent pages were clients referred to?
+### 5. What time did site get the most requests?
+### 6. What search bots have accessed the site? (UA + IP)
 
 We will use AWK-script to analise log
 
@@ -28,26 +37,8 @@ Web-server access.log structure:
 %{Host} — имя Virtual Host, к которому идет обращение.
 We have 9 parameters(fields) to analise
 
-### 1. From which ip were the most requests?
-we can use command to find all uniq strings, sort them, and show only 1 must requested
->awk '{ print $1}' apache_logs.txt | sort | uniq -c | sort -nr | head -n 1
 
-### 2. What is the most requested page?
-we can use command
->awk '{ print $7}' apache_logs.txt | sort | uniq -c | sort -nr | tail -n 1
-
-### 3. How many requests were there from each ip?
-we can use command to output 
->awk '{ print $1}' apache_logs.txt | sort | uniq -c | sort -nr
-
-### 4. What non-existent pages were clients referred to?
-we can use command
->cat apache_logs.txt | grep error404 -B 1 | awk '{print $7}'
-
-### 5. What time did site get the most requests?
-cat apache_logs.txt | awk '($9 ~ /404/)' | awk '{ print $7 }' | sort | uniq -c | sort -rn | head -n 1
-
-### 6. What search bots have accessed the site? (UA + IP)
+[Task 7.1.B script]: ./71b
 
 ![Task 7.1.B](./images/7.1_b_01.png)
 ![Task 7.1.B](./images/7.1_b_02.png)
@@ -57,6 +48,6 @@ cat apache_logs.txt | awk '($9 ~ /404/)' | awk '{ print $7 }' | sort | uniq -c |
 ### 1. Path to the syncing directory.
 ### 2. The path to the directory where the copies of the files will be stored.
 
-![Task 7.1.A](./images/7.1_C_01.png)
+![Task 7.1.C](./images/7.1_c_01.png)
 
 > In case of adding new or deleting old files, the script must add a corresponding entry to the log file indicating the time, type of operation and file name. [The command to run the script must be added to crontab with a run frequency of one minute]
