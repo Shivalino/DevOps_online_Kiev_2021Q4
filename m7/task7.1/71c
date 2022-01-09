@@ -1,0 +1,57 @@
+#!/bin/bash
+
+#Posible keys description
+if [[ "$#" == "0" ]]
+then
+	echo -e "Script arguments:"
+	echo -e "Example: ./bash_scripts/71c [Source folder] [dest folder]"
+	exit 0
+elif ! [[ -d $1 ]]
+then
+	echo -e "Error! Source directory does not exist!"
+	exit 0
+elif [[ -z $2 ]]
+then
+	echo -e "Error! You must set dest directory!"
+	exit 0
+#elif [[ -d $2 ]]
+#then
+#	echo -e "Dest directory is absent? trying to create $2!"
+#	mkdir "$2"
+#	echo -e "Dest directory $2 is created!"
+#	exit 0
+fi
+
+# Initialisation
+srcdir=$1
+dstdir=$2
+log=$dstdir/backup.log
+tmpdir=$dstdir/tmpdir
+
+if ! [[ -d $tmpdir ]]; then
+	mkdir $tmpdir
+fi
+touch $dstdir/backup.log;
+touch $tmpdir/ls.tmp;
+touch $tmpdir/snapshot.tmp;
+
+ls $srcdir > $tmpdir/ls.tmp;
+
+# Archiving and logging
+dt=$(date '+%d.%m.%Y_%H:%M:%S');
+for var1 in $(diff -y --suppress-common-lines $tmpdir/ls.tmp $tmpdir/snapshot.tmp | awk '{print $1}' | sed 's/>//g; /^[[:space:]]*$/d')
+do
+	echo "$dt created $var1" >> $log
+	tar -rvf $dstdir/backup.tar $srcdir/$var1 > /dev/null
+	echo "$dt archived  $var1" >> $log
+done
+
+echo "Backupped!"
+
+for var2 in $(diff -y --suppress-common-lines $tmpdir/ls.tmp $tmpdir/snapshot.tmp | awk '{print $2$3}' | sed 's/<//g; /^[[:space:]]*$/d; s/|//g')
+do
+	echo "$dt deleted $var2" >> $log
+done
+
+rm -rf $tmpdir/ls.tmp;
+ls $srcdir > $tmpdir/snapshot.tmp

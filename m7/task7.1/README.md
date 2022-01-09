@@ -48,6 +48,10 @@ See script B [here](71b)
 ### 1. Path to the syncing directory.
 ### 2. The path to the directory where the copies of the files will be stored.
 
+See script C [here](71c)
+
 ![Task 7.1.C](./images/7.1_c_01.png)
+![Task 7.1.C](./images/7.1_c_02.png)
+![Task 7.1.C](./images/7.1_c_03.png)
 
 > In case of adding new or deleting old files, the script must add a corresponding entry to the log file indicating the time, type of operation and file name. [The command to run the script must be added to crontab with a run frequency of one minute]
