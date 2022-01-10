@@ -3,10 +3,34 @@
 
 ## 6.1.1. Create virtual machines connection according to figure 1.
 
+I have created 2 Ubuntu server 18.04 LTS VMs
+
 ![Task 6.1.1](./images/6-1-2.png)
 
 ## 6.1.2. VM2 has one interface (internal), VM1 has 2 interfaces (NAT and internal).
 > Configure all network interfaces in order to make VM2 has an access to the Internet (iptables, forward, masquerade).
+
+Config enp0s8 on VM1:  
+sudo ip addr add 192.168.1.1/24 broadcast 192.168.1.255 dev enp0s8  
+sudo ip link set enp0s8 up  
+
+Config enp0s3 on VM2:  
+sudo ip addr add 192.168.1.2/24 broadcast 192.168.1.255 dev enp0s3  
+sudo ip link set enp0s3 up  
+sudo ip route add default via 192.168.1.1
+sudo echo nameserver 8.8.8.8 >> /etc/resolv.conf
+sudo echo nameserver 4.4.4.4 >> /etc/resolv.conf
+
+IP forwarding VM2: 
+sudo bash -c 'echo 1 > /proc/sys/net/ipv4/ip_forward'
+
+Add iptables rules to forward traffic:  
+
+sudo iptables -A FORWARD -i enp0s8 -o enp0s3 -m state --state RELATED,ESTABLISHED -j ACCEPT
+sudo iptables -A FORWARD -i enp0s8 -o enp0s3 -j ACCEPT
+sudo iptables -t nat -A POSTROUTING -o enp0s3 -j MASQUERADE
+sudo iptables -t nat -A PREROUTING -i enp0s3 -p tcp --dport 2223 -j DNAT --to-destination 192.168.1.2:22
+sudo iptables -S
 
 ![Task 6.1.2](./images/6-2-21.png)
 
