@@ -22,3 +22,10 @@
 - Github - for storing "Sample web-application" sources  
 - AWS Elastic Lifecycle Manager for Schedule backups of EC2 instance EBS-volumes  
 
+### EC2 instances
+
+![01](./images/01.png)
+
+### Environments
+
+![02](./images/02.png)
