@@ -1,0 +1,18 @@
+---
+- hosts: dockerhost
+
+  tasks:
+  - name: stop existing PROD container
+    command: docker stop regapp-stage-server
+    ignore_errors: yes
+
+  - name: remove the PROD container
+    command: docker rm regapp-stage-server
+    ignore_errors: yes
+
+  - name: remove PROD image
+    command: docker rmi -f sha777/regapp:latest
+    ignore_errors: yes
+
+  - name: create DEV container
+    command: docker run -d --name regapp-stage-server -p 8083:8080 sha777/regapp:latest

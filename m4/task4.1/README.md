@@ -14,20 +14,25 @@ I have instaled MySQL on Ubuntu 18  Vbox-instance
 
 > 3. Select a subject area and describe the database schema, (minimum 3 tables)
 
-PetClinic
+I have used model from here 
+
+https://knowledge.allbest.ru/programming/3c0a65625a2ac78a5c43a89421216d26_0.html
+
+petclinic
+
 Tables:
-Animals
-PetOwners
-Doctors
-Diagnosises
-Treatments
+ANIMALS
+PETOWNERS
+DOCTORS
+DIAGNOSISES
+TREATMENTS
 
 > 4. Create a database on the server through the console.
 mysql -u root -p
 CREATE DATABASE petclinic;
 USE petclinic;
 
-> 5. The database is created and filled with a script:
+> 5. The database is created and filled using the script:
 ![DB4_03](./Petclinic-MySQL-Script.sql)
 
 ![DB4_04](./images/4.1_04.png)

@@ -1,0 +1,18 @@
+---
+- hosts: dockerhost
+
+  tasks:
+  - name: stop existing TEST container
+    command: docker stop regapp-test-server
+    ignore_errors: yes
+
+  - name: remove the TEST container
+    command: docker rm regapp-test-server
+    ignore_errors: yes
+
+  - name: remove TEST image
+    command: docker rmi sha777/regapp:latest
+    ignore_errors: yes
+
+  - name: create TEST container
+    command: docker run -d --name regapp-test-server -p 8082:8080 sha777/regapp:latest

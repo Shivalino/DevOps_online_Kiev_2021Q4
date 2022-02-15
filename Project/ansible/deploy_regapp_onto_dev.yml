@@ -1,0 +1,18 @@
+---
+- hosts: dockerhost
+
+  tasks:
+  - name: stop existing DEV container
+    command: docker stop regapp-dev-server
+    ignore_errors: yes
+
+  - name: remove the DEV container
+    command: docker rm regapp-dev-server
+    ignore_errors: yes
+
+  - name: remove DEV image
+    command: docker rmi -f sha777/regapp:latest
+    ignore_errors: yes
+
+  - name: create DEV container
+    command: docker run -d --name regapp-dev-server -p 8081:8080 sha777/regapp:latest
